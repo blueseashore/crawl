@@ -1,13 +1,10 @@
-# 猫眼电影抓取,http://maoyan.com/
+# -*- coding: utf-8 -*
 import requests
 from requests.exceptions import RequestException
 import re
 import json
-from selenium import webdriver
-import time
-import os
 import MySQLdb
-import string
+import sys
 
 
 def get_one_page(url):
@@ -68,7 +65,7 @@ def parse_one_page(html):
 
 
 def main():
-    db = MySQLdb.connect('192.168.31.100', 'root', '123456', 'shengxi_v2')
+    db = MySQLdb.connect('127.0.0.1', 'root', sys.argv[1], 'shengxi_v2')
     cursor = db.cursor()
     sql = """select * from sx_maoyan"""
     cursor.execute(sql)

@@ -5,6 +5,7 @@ import re
 import json
 import MySQLdb
 import time
+import sys
 
 
 def get_one_page(url):
@@ -49,9 +50,11 @@ def parse_one_page(html):
 
 
 def main():
-    db = MySQLdb.connect('192.168.31.100', 'root', '123456', 'shengxi_v2')
+    db = MySQLdb.connect('127.0.0.1', 'root', sys.argv[1], 'shengxi_v2')
     cursor = db.cursor()
     url = 'http://maoyan.com/films?showType=2'
+
+    cursor.execute("truncate table sx_maoyan")
 
     for i in range(0, 9):
         offset = i * 30
