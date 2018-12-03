@@ -1,4 +1,4 @@
-# 猫眼电影抓取,http://maoyan.com/
+# -*- coding: utf-8 -*-
 import requests
 from requests.exceptions import RequestException
 import re
