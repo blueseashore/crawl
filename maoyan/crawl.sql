@@ -6,7 +6,7 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 192.168.31.100 (MySQL 5.7.22-log)
-# Database: shengxi_v2
+# Database: xxx
 # Generation Time: 2018-11-27 09:46:54 +0000
 # ************************************************************
 
